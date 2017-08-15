@@ -1,6 +1,7 @@
 
 $(function(){
 	$(window).resize();
+	//resize() 方法触发 resize 事件，或规定当发生 resize 事件时运行的函数。
 	$("#block-nav").css("z-index", 1);
 
 	// 导航条固定顶部
@@ -11,6 +12,7 @@ $(function(){
 		var $anchor = $(this);
 		$('html, body').stop().animate({scrollTop: $($anchor.attr('href')).offset().top-52}, 600);
 		event.preventDefault();
+		//event.preventDefault() 方法阻止元素发生默认的行为,防止打开URL
 	});
 });
 
